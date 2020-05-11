@@ -1,14 +1,8 @@
-
 public class PeriodicTable extends javax.swing.JFrame {
-
- 
-    public void PeriodicTable() {
+ public void PeriodicTable() {
         initComponents();
     }
-
-   
-                          
-    private void initComponents() {
+       private void initComponents() {
 
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
