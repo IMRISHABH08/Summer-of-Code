@@ -74,26 +74,24 @@ public class Calc
                         s=1;
                         double arr[]=new double[n];
                         System.out.println("ENTER THE VALUE FOR EACH NUMBER");
-                        for(i=0;i<n;i++)
+                        for(i=0;i<=arr.length-1;i++)
                         {
-                            
                             arr[i]=s1.nextDouble();
-                            if(s1.nextDouble()>0)
-                            {
-            
-            
-                                if(arr.length>1)
-                                {
-                                    s=(double)(arr[i]/arr[i+1]);
-                                }
-                                else
-                                {
-                                    s=(double)((arr[i])/s);
-                                
-                                }
-                            }
-               
-                    }System.out.println("DIVISION ANS==>"+s);
+			    if(i>=1)
+			    s=arr[i-1]/arr[i];
+			    if(i>=1 && arr[i]==0)
+			    {
+                            	try
+			    	{
+                            		 s=arr[i]/arr[i+1];
+                            	
+                            	}
+			    	catch(ArrayIndexOutOfBoundsException e)
+			    	{
+					System.out.println("array index out of bound ");
+			   	}
+			    }
+                        }System.out.println("DIVISION ANS==>"+s);
                 	}
 		            default:
 			        {
